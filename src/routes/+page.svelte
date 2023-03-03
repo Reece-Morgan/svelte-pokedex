@@ -11,8 +11,10 @@
 <div class="gen-grid">
     {#each data.results as result}
         <div class="gen-tile">
-            <img src={getRegionIcon(result.name)} alt={result.name} />
-            <p>{formatText(result.name)}</p>
+            <a href='/coming-soon'>
+                <img src={getRegionIcon(result.name)} alt={result.name} />
+                <p>{formatText(result.name)}</p>
+            </a>
         </div>
     {/each}
 </div>
@@ -43,11 +45,22 @@
         padding: 0 10px;
     }
 
-    .gen-grid .gen-tile img {
+    .gen-grid .gen-tile a {
+        color: #ffcb05;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .gen-grid .gen-tile a:hover {
+        color: #ffcb05;
+        text-decoration: underline;
+    }
+
+    .gen-grid .gen-tile a img {
         height: 300px;
     }
 
-    .gen-grid .gen-tile p {
+    .gen-grid .gen-tile a p {
         color: #ffcb05;
         font-size: 1em;
         font-weight: 500;
