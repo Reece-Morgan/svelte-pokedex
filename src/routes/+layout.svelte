@@ -3,10 +3,12 @@
     <h1 class="subtitle">Pokedex</h1>
 </nav>
 
+<!-- TODO: add sub nav -->
+
 <slot></slot>
 
 <footer>
-    <a href="https://www.reecemorgan.co.uk" target="_blank" rel="noreferrer">Reece Morgan 2023</a>
+    <a class="footer-link" href="https://www.reecemorgan.co.uk" target="_blank" rel="noreferrer">Reece Morgan 2023</a>
 </footer>
 
 <style>
@@ -41,14 +43,14 @@
         border-top: 2px solid #ffcb05;
     }
 
-    footer a {
+    footer .footer-link {
         font-size: 1em;
         color: #ffcb05;
         text-decoration: none;
         font-family: 'Aldrich', 'Verdana', sans-serif;
     }
 
-    footer a:hover {
+    footer .footer-link:hover {
         color: #ffcb05;
         text-decoration: underline
     }
