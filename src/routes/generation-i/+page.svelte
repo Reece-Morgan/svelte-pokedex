@@ -11,8 +11,8 @@
 <div class="gen-grid">
     {#each data.results as pokemon, i}
         <div class="gen-tile">
-            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{i+1}.png' alt={pokemon.name} />
-            <p>{pokemon.name}</p>
+            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{i+1}.png' alt={pokemon.name} />
+            <p>No. {i+1}: {pokemon.name}</p>
         </div>
     {/each}
 </div>
@@ -42,7 +42,7 @@
     }
 
     .gen-grid .gen-tile img {
-        height: 300px;
+        height: 150px;
     }
 
     .gen-grid .gen-tile p {
