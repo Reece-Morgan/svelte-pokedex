@@ -1,8 +1,7 @@
-import { getGen1Pokemon } from "./+server";
+import { getPokemon } from "./+server";
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-    const res = await getGen1Pokemon();
-    console.log('res: ' + JSON.stringify(res));
+    const res = await getPokemon(151, 0);
     return res;
 }

@@ -1,4 +1,4 @@
-export function getGen1Pokemon() {
-    return fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+export function getPokemon(limit: number, offset: number) {
+    return fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
         .then(response => response.json());
 }
