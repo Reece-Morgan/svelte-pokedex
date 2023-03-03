@@ -3,6 +3,7 @@
     export let data;
 </script>
 
+<!-- TODO: investigate turning hardcoded page into dynamic page for every gen -->
 <h2 class="title">Generation I</h2>
 
 <!-- TODO: investigate adding lazy loading to each -->

@@ -41,4 +41,14 @@
     .poke-images img {
         width: 30%;
     }
+
+    @media(max-width: 500px) {
+        .content {
+            max-width: 320px;
+        }
+        
+        .content img {
+            max-width: 320px;
+        }
+    }
 </style>
