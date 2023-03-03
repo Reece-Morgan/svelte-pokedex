@@ -1,6 +1,4 @@
 <script>
-    import { formatText } from '../+server';
-
     /** @type {import('./$types').PageData} */  
     export let data;
 </script>
