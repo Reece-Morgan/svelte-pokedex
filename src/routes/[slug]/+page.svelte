@@ -1,16 +1,19 @@
 <script>
+    import { formatText } from '../+server';
+
+
     /** @type {import('./$types').PageData} */  
     export let data;
 </script>
 
 <!-- TODO: investigate turning hardcoded page into dynamic page for every gen -->
 <div class="title-wrapper">
-    <h2 class="title">Generation I</h2>
+    <h2 class="title">{formatText(data.slug)}</h2>
     <a class="back-link" href='/'>Back</a>
 </div>
 
 <div class="gen-grid">
-    {#each data.results as pokemon, i}
+    {#each data.res.results as pokemon, i}
         <div class="gen-tile">
             <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{i+1}.png' alt={pokemon.name} />
             <p>No. {i+1}: {pokemon.name}</p>
