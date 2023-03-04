@@ -4,9 +4,11 @@
 </script>
 
 <!-- TODO: investigate turning hardcoded page into dynamic page for every gen -->
-<h2 class="title">Generation I</h2>
+<div class="title-wrapper">
+    <h2 class="title">Generation I</h2>
+    <a class="back-link" href='/'>Back</a>
+</div>
 
-<!-- TODO: investigate adding lazy loading to each -->
 <div class="gen-grid">
     {#each data.results as pokemon, i}
         <div class="gen-tile">
@@ -17,12 +19,33 @@
 </div>
 
 <style>
-    .title {
+    .title-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-wrapper .title {
         color: #ffcb05;
         font-size: 2em;
         font-weight: 800;
         font-family: 'Aldrich', 'Verdana', sans-serif;
         text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .title-wrapper .back-link {
+        color: #ffcb05;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: 'Aldrich', 'Verdana', sans-serif;
+    }
+
+    .back-link:hover {
+        color: #ffcb05;
+        text-decoration: underline;
     }
 
     .gen-grid {

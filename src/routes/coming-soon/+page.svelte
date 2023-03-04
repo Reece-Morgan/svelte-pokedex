@@ -15,7 +15,7 @@
         margin: 0 auto;
     }
 
-    .content p{
+    .content p {
         font-size: 2em;
         font-family: 'Aldrich', 'Verdana', sans-serif;
         text-align: center;
