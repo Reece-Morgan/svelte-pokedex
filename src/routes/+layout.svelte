@@ -1,6 +1,8 @@
 <nav>
-    <img class="header-logo" src="/poke-logo.svg" alt="Pokemon Logo" />
-    <h1 class="subtitle">Pokedex</h1>
+    <a href='/'>
+        <img class="header-logo" src="/poke-logo.svg" alt="Pokemon Logo" />
+        <h1 class="subtitle">Pokedex</h1>
+    </a>
 </nav>
 
 <!-- TODO: add sub nav -->
@@ -23,15 +25,26 @@
         border-bottom: 2px solid #ffcb05;
     }
 
-    nav .header-logo {
+    nav a {
+        color: #ffcb05;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: #ffcb05;
+        text-decoration: none;
+    }
+
+    nav a .header-logo {
         height: 70px;
     }
 
-    nav .subtitle {
+    nav a .subtitle {
         font-size: 1.25em;
         font-weight: 800;
         font-family: 'Aldrich', 'Verdana', sans-serif;
         margin: 0;
+        text-align: center;
     }
 
     footer {
