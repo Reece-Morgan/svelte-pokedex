@@ -1,8 +1,15 @@
 import { error } from "@sveltejs/kit";
 import { getLimitAndOffset, getPokemon } from "./+server";
 
+import type { Params } from "../../types";
+
 /** @type {import('./$types').PageServerLoad} */
-export const load = async ({ params }) => {
+
+interface Props {
+    params: Params
+}
+
+export const load = async ({ params }: Props) => {
     const param = getLimitAndOffset(params.slug);
     const res = await getPokemon(param.limit, param.offset);
     if (acceptableUrls.includes(params.slug)) {
@@ -26,4 +33,4 @@ const acceptableUrls = [
     'generation-vii',
     'generation-viii',
     'generation-ix'
-]
+];
