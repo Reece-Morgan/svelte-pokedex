@@ -11,7 +11,7 @@
 <div class="gen-grid">
     {#each data.results as result}
         <div class="gen-tile">
-            <a href='/coming-soon'>
+            <a href='/{result.name}'>
                 <img src={getRegionIcon(result.name)} alt={result.name} />
                 <p>{formatText(result.name)}</p>
             </a>
@@ -43,6 +43,7 @@
         justify-content: center;
         align-items: center;
         padding: 0 10px;
+        min-width: 300px;
     }
 
     .gen-grid .gen-tile a {
