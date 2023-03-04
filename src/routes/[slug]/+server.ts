@@ -42,13 +42,13 @@ export const getLimitAndOffset = (generation: string) => {
             }
         case 'generation-viii':
             return {
-                limit: 89,
+                limit: 96,
                 offset: 809
             }
         case 'generation-ix':
             return {
-                limit: 112,
-                offset: 898
+                limit: 103,
+                offset: 905
             }
         default:
             return {
@@ -56,4 +56,10 @@ export const getLimitAndOffset = (generation: string) => {
                 offset: 0
             }
     }
+}
+
+export const getPokemonNumber = (url: string) => {
+    const str = url.slice(33);
+    const number = str.split('/').join('');
+    return number;
 }

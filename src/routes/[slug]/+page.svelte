@@ -1,6 +1,6 @@
 <script>
     import { formatText } from '../+server';
-
+    import { getPokemonNumber } from './+server';
 
     /** @type {import('./$types').PageData} */  
     export let data;
@@ -15,8 +15,8 @@
 <div class="gen-grid">
     {#each data.res.results as pokemon, i}
         <div class="gen-tile">
-            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{i+1}.png' alt={pokemon.name} />
-            <p>No. {i+1}: {pokemon.name}</p>
+            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{getPokemonNumber(pokemon.url)}.png' alt={pokemon.name} />
+            <p>No. {getPokemonNumber(pokemon.url)}: {pokemon.name}</p>
         </div>
     {/each}
 </div>
