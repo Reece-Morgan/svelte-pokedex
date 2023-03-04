@@ -23,6 +23,10 @@
         color: #ffcb05;
         background: #003a70;
         border-bottom: 2px solid #ffcb05;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     nav a {
